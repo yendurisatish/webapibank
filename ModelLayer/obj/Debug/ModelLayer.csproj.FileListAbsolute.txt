@@ -1,0 +1,5 @@
+c:\users\saivenkatas\documents\visual studio 2013\Projects\BankWebApi\ModelLayer\bin\Debug\ModelLayer.dll
+c:\users\saivenkatas\documents\visual studio 2013\Projects\BankWebApi\ModelLayer\bin\Debug\ModelLayer.pdb
+c:\users\saivenkatas\documents\visual studio 2013\Projects\BankWebApi\ModelLayer\obj\Debug\ModelLayer.dll
+c:\users\saivenkatas\documents\visual studio 2013\Projects\BankWebApi\ModelLayer\obj\Debug\ModelLayer.pdb
+C:\Users\saivenkatas\documents\visual studio 2013\Projects\BankWebApi\ModelLayer\obj\Debug\ModelLayer.csprojResolveAssemblyReference.cache
