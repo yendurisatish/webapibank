@@ -20,7 +20,7 @@ namespace RepositoryLayer
             {
                 con.ConnectionString = ConfigurationManager.ConnectionStrings["BankManagmentConn"].ConnectionString;
                 con.Open();
-                string getUserDetail = "SELECT * FROM Customer";
+                string getUserDetail = "SELECT * FROM [view all users]";
                 SqlCommand cmd = new SqlCommand(getUserDetail, con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
@@ -41,7 +41,7 @@ namespace RepositoryLayer
             {
                 con.ConnectionString = ConfigurationManager.ConnectionStrings["BankManagmentConn"].ConnectionString;
                 con.Open();
-                string getUserDetail = "SELECT * FROM [MyBank].[dbo].[deposits]";
+                string getUserDetail = "SELECT * FROM getdeposits()";
                 SqlCommand cmd = new SqlCommand(getUserDetail, con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
@@ -62,7 +62,7 @@ namespace RepositoryLayer
             {
                 con.ConnectionString = ConfigurationManager.ConnectionStrings["BankManagmentConn"].ConnectionString;
                 con.Open();
-                string getUserDetail = "SELECT * FROM [MyBank].[dbo].[Loans]";
+                string getUserDetail = "SELECT * FROM [view loans]";
                 SqlCommand cmd = new SqlCommand(getUserDetail, con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
@@ -87,7 +87,7 @@ namespace RepositoryLayer
                 //DateTime dob = DateTime.ParseExact(Convert.ToString(cu.Dob), "dd/mm/yyyy", null);
                 int boolInt = cu.IsAdmin ? 1 : 0;
                 SqlCommand cmd = new SqlCommand("AddAccount", con);
-                SqlCommand cmd1 = new SqlCommand("insert into Login(username,password,admin) values('" + cu.UserName + "','" + cu.Password + "'," + boolInt + ");", con);
+               // SqlCommand cmd1 = new SqlCommand("insert into Login(username,password,admin) values('" + cu.UserName + "','" + cu.Password + "'," + boolInt + ");", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@username", cu.UserName);
                 //  cmd.Parameters.AddWithValue("@accountno", cu.AccountNumber);
@@ -102,7 +102,7 @@ namespace RepositoryLayer
                 cmd.Parameters.AddWithValue("@address", cu.Address);
                 cmd.Parameters.AddWithValue("@password", cu.Password);
                 cmd.Parameters.AddWithValue("@admin", cu.IsAdmin);
-                cmd1.ExecuteNonQuery();
+                //cmd1.ExecuteNonQuery();
                 cmd.ExecuteNonQuery();
 
 
